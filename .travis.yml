@@ -1,7 +1,7 @@
 os: linux
 
 script:
-  - rem dummy
+  - echo dummy
 
 deploy:
   provider: s3

@@ -7,7 +7,7 @@
         fetch("http://bletchmame.s3-website-us-east-1.amazonaws.com/files/mame64.version.txt")
         .then(function (response) {
             response.text().then(function (text) {
-                document.getElementById("version").innerText = " (" + text + ")";
+                document.getElementById("version").innerText = " [" + text + "]";
             });
         });
     </script>

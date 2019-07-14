@@ -4,3 +4,8 @@ body
     color: lightyellow;
     font-family: sans-serif
 }
+.mycell
+{
+    max-width: 200px;
+    max-height: 200px
+}

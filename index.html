@@ -7,8 +7,7 @@
         fetch("http://bletchmame.s3-website-us-east-1.amazonaws.com/files/mame64.version.txt")
         .then(function (response) {
             response.text().then(function (text) {
-                alert(text);
-                document.getElementById("version").innerText = text;
+                document.getElementById("version").innerText = " (" + text + ")";
             });
         });
     </script>
@@ -66,8 +65,8 @@
             <td><a href="files/BletchMAME.zip">BletchMAME.zip</a></td>
         </tr>
         <tr>
-            <td>MAME executable <span id="version"></span> (with hooks required for BletchMAME compatibility)</td>
-            <td><a href="files/mame64.zip">mame64.zip</a></td>
+            <td>MAME executable (with hooks required for BletchMAME compatibility)</td>
+            <td><a href="files/mame64.zip">mame64.zip</a><span id="version"></span></td>
         </tr>
     </table>
 

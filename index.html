@@ -4,10 +4,16 @@
             <link rel="stylesheet" href="bletchmame.css" />
     </head>
     <script language="javascript">
+        fetch("http://bletchmame.s3-website-us-east-1.amazonaws.com/files/version_latest.txt")
+        .then(function (response) {
+            response.text().then(function (text) {
+                document.getElementById("bletchmame_latest_version").innerText = " [" + text + "]";
+            });
+        });
         fetch("http://bletchmame.s3-website-us-east-1.amazonaws.com/files/mame64.version.txt")
         .then(function (response) {
             response.text().then(function (text) {
-                document.getElementById("version").innerText = " [" + text + "]";
+                document.getElementById("mame64_worker_ui_version").innerText = " [" + text + "]";
             });
         });
     </script>
@@ -67,11 +73,11 @@
     </p>
     <table border="1">
         <tr>
-            <td>BletchMAME Installer</td>
-            <td><a href="files/BletchMAME.msi">BletchMAME.msi</a></td>
+            <td>BletchMAME Installer (Latest)<span id="bletchmame_latest_version"></span></td>
+            <td><a href="files/BletchMAME_latest.msi">BletchMAME.msi</a></td>
         </tr>
         <tr>
-            <td>MAME executable<span id="version"></span></td>
+            <td>MAME executable<span id="mame64_worker_ui_version"></span></td>
             <td><a href="files/mame64.zip">mame64.zip</a></td>
         </tr>
     </table>

@@ -4,16 +4,20 @@
             <link rel="stylesheet" href="bletchmame.css" />
     </head>
     <script language="javascript">
+        function trimWhitespace(str) {
+            return str.replace(/^\s\n+|\s\n+$/g,'');
+        }
+
         fetch("http://bletchmame.s3-website-us-east-1.amazonaws.com/files/version_latest.txt")
         .then(function (response) {
             response.text().then(function (text) {
-                document.getElementById("bletchmame_latest_version").innerText = " [" + text + "]";
+                document.getElementById("bletchmame_latest_version").innerText = " [" + trimWhitespace(text) + "]";
             });
         });
         fetch("http://bletchmame.s3-website-us-east-1.amazonaws.com/files/mame64.version.txt")
         .then(function (response) {
             response.text().then(function (text) {
-                document.getElementById("mame64_worker_ui_version").innerText = " [" + text + "]";
+                document.getElementById("mame64_worker_ui_version").innerText = " [" + trimWhitespace(text) + "]";
             });
         });
     </script>
@@ -74,7 +78,7 @@
     <table border="1">
         <tr>
             <td>BletchMAME Installer (Latest)<span id="bletchmame_latest_version"></span></td>
-            <td><a href="files/BletchMAME_latest.msi">BletchMAME.msi</a></td>
+            <td><a href="files/BletchMAME_latest.msi">BletchMAME_latest.msi</a></td>
         </tr>
         <tr>
             <td>MAME executable<span id="mame64_worker_ui_version"></span></td>

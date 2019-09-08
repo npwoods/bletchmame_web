@@ -11,13 +11,11 @@
         fetch("http://bletchmame.s3-website-us-east-1.amazonaws.com/files/version_latest.txt")
         .then(function (response) {
             response.text().then(function (text) {
-                document.getElementById("bletchmame_latest_version").innerText = " [" + trimWhitespace(text) + "]";
-            });
-        });
-        fetch("http://bletchmame.s3-website-us-east-1.amazonaws.com/files/mame64.version.txt")
-        .then(function (response) {
-            response.text().then(function (text) {
-                document.getElementById("mame64_worker_ui_version").innerText = " [" + trimWhitespace(text) + "]";
+                text = trimWhitespace(text);
+                if (!text.endsWith(".0")) {
+                    document.getElementById("bletchmame_latest_version_row").style.visibility = "visible";
+                    document.getElementById("bletchmame_latest_version").innerText = " [" + trimWhitespace(text) + "]";
+                }        
             });
         });
     </script>
@@ -31,7 +29,7 @@
         particularly suitable to computer emulation.
     </p>
     <p>
-        The current BletchMAME is version 1.0, and required MAME 0.213 or later.
+        The current BletchMAME is version 1.1, and requires MAME 0.213 or later.
     </p>
 
     <h2>Screenshots</h2>
@@ -72,14 +70,22 @@
     <h3>Releases</h3>
     <table border="1">
         <tr>
+            <td>1.1</td>
+            <td>2019-Sep-8</td>
+            <td><a href="files/BletchMAME_1_1.msi">BletchMAME_1_1.msi</a></td>
+            <td>Bug fixes</td>
+        </tr>
+        <tr>
             <td>1.0</td>
             <td>2019-Sep-7</td>
             <td><a href="files/BletchMAME_1_0.msi">BletchMAME_1_0.msi</a></td>
+            <td>Initial release</td>
         </tr>
-        <tr>
-            <td>Bleeding edge latest (might not work!)<span id="bletchmame_latest_version"></span></td>
-            <td/>
+        <tr style="visibility: hidden" id="bletchmame_latest_version_row">
+            <td>Bleeding edge latest<span id="bletchmame_latest_version"></span></td>
+            <td />
             <td><a href="files/BletchMAME_latest.msi">BletchMAME_latest.msi</a></td>
+            <td>Might not work!</td>
         </tr>
     </table>
 

@@ -1,3 +1,49 @@
+<?php 
+
+$versions = array( 
+    "1.6" => array( 
+        "date" => "2019-Nov-24", 
+		"msi" => "BletchMAME_1_6.msi",
+		"zip" => "BletchMAME_1_6.zip",
+		"notes" => "Bug fixes"
+    ), 
+    "1.5" => array( 
+        "date" => "2019-Nov-10", 
+		"msi" => "BletchMAME_1_5.msi",
+		"zip" => "BletchMAME_1_5.zip",
+		"notes" => "Support for MAMEUI-style icon packs"
+    ), 
+    "1.4" => array( 
+        "date" => "2019-Nov-3", 
+		"msi" => "BletchMAME_1_4.msi",
+		"zip" => "BletchMAME_1_4.zip",
+		"notes" => "Full software list support"
+    ), 
+    "1.3" => array( 
+        "date" => "2019-Oct-9", 
+		"msi" => "BletchMAME_1_3.msi",
+		"zip" => "BletchMAME_1_3.zip",
+		"notes" => "Basic software list support"
+    ), 
+    "1.2" => array( 
+        "date" => "2019-Sep-18", 
+		"msi" => "BletchMAME_1_2.msi",
+		"zip" => "BletchMAME_1_2.zip",
+		"notes" => "Bug fixes"
+    ), 
+    "1.1" => array( 
+        "date" => "2019-Sep-8", 
+		"msi" => "BletchMAME_1_1.msi",
+		"notes" => "Bug fixes"
+    ), 
+    "1.0" => array( 
+        "date" => "2019-Sep-7", 
+		"msi" => "BletchMAME_1_0.msi",
+		"notes" => "Initial release"
+    )
+); 
+
+?>
 <html>
     <head>
             <title>BletchMAME</title>
@@ -23,7 +69,7 @@
 
     <h1>BletchMAME</h1>
     <p>
-        BletchMAME is a new front end for <a href="https://www.mamedev.org/">MAME</a>.  Unlike existing front ends (which function as launchers, keeping
+        BletchMAME is a new experimental front end for <a href="https://www.mamedev.org/">MAME</a>.  Unlike existing front ends (which function as launchers, keeping
         MAME's internal UI), BletchMAME replaces the internal MAME UI with a more conventional point and click GUI to provide a friendlier experience in a number of
         areas (such as profiles, input configuration and a number of others).  While BletchMAME is intended to support all machines supported by MAME, it should be
         particularly suitable to computer emulation.

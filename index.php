@@ -1,6 +1,6 @@
 <?php 
 
-$versions = array( 
+$all_versions = array( 
     "1.6" => array( 
         "date" => "2019-Nov-24", 
 		"msi" => "BletchMAME_1_6.msi",
@@ -123,55 +123,18 @@ $versions = array(
             <td>Summary</td>
         </thead>
         <tbody>
-            <tr>
-                <td>1.6</td>
-                <td>2019-Nov-24</td>
-                <td><a href="files/BletchMAME_1_6.msi">BletchMAME_1_6.msi</a></td>
-                <td><a href="files/BletchMAME_1_6.zip">BletchMAME_1_6.zip</a></td>
-                <td>Bug fixes</td>
-            </tr>
-            <tr>
-                <td>1.5</td>
-                <td>2019-Nov-10</td>
-                <td><a href="files/BletchMAME_1_5.msi">BletchMAME_1_5.msi</a></td>
-                <td><a href="files/BletchMAME_1_5.zip">BletchMAME_1_5.zip</a></td>
-                <td>Support for MAMEUI-style icon packs</td>
-            </tr>
-            <tr>
-                <td>1.4</td>
-                <td>2019-Nov-3</td>
-                <td><a href="files/BletchMAME_1_4.msi">BletchMAME_1_4.msi</a></td>
-                <td><a href="files/BletchMAME_1_4.zip">BletchMAME_1_4.zip</a></td>
-                <td>Full software list support</td>
-            </tr>
-            <tr>
-                <td>1.3</td>
-                <td>2019-Oct-9</td>
-                <td><a href="files/BletchMAME_1_3.msi">BletchMAME_1_3.msi</a></td>
-                <td><a href="files/BletchMAME_1_3.zip">BletchMAME_1_3.zip</a></td>
-                <td>Basic software list support</td>
-            </tr>
-            <tr>
-                <td>1.2</td>
-                <td>2019-Sep-18</td>
-                <td><a href="files/BletchMAME_1_2.msi">BletchMAME_1_2.msi</a></td>
-                <td><a href="files/BletchMAME_1_2.zip">BletchMAME_1_2.zip</a></td>
-                <td>Bug fixes</td>
-            </tr>
-            <tr>
-                <td>1.1</td>
-                <td>2019-Sep-8</td>
-                <td><a href="files/BletchMAME_1_1.msi">BletchMAME_1_1.msi</a></td>
-                <td />
-                <td>Bug fixes</td>
-            </tr>
-            <tr>
-                <td>1.0</td>
-                <td>2019-Sep-7</td>
-                <td><a href="files/BletchMAME_1_0.msi">BletchMAME_1_0.msi</a></td>
-                <td />
-                <td>Initial release</td>
-            </tr>
+			<?
+				foreach(array_keys($all_versions) as $version)
+				{
+					echo "<tr>";
+					echo "<td>$version</td>";
+					echo "<td>$all_versions[$version]["date"]</td>";
+					echo "<td><a href=\"files/$all_versions[$version]["msi"]\">$all_versions[$version]["msi"]</a></td>";
+					echo "<td><a href=\"files/$all_versions[$version]["zip"]\">$all_versions[$version]["zip"]</a></td>";
+					echo "<td>$all_versions[$version]["notes"]</td>";
+					echo "</tr>";
+				}
+			?>
             <tr style="visibility: hidden" id="bletchmame_latest_version_row">
                 <td>Bleeding edge latest<span id="bletchmame_latest_version"></span></td>
                 <td />

@@ -23,7 +23,7 @@
 
     <h1>BletchMAME</h1>
     <p>
-        BletchMAME is a new experimental front end for <a href="https://www.mamedev.org/">MAME</a>.  Unlike existing front ends (which function as launchers, keeping
+        BletchMAME is a new front end for <a href="https://www.mamedev.org/">MAME</a>.  Unlike existing front ends (which function as launchers, keeping
         MAME's internal UI), BletchMAME replaces the internal MAME UI with a more conventional point and click GUI to provide a friendlier experience in a number of
         areas (such as profiles, input configuration and a number of others).  While BletchMAME is intended to support all machines supported by MAME, it should be
         particularly suitable to computer emulation.

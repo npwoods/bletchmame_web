@@ -10,5 +10,4 @@ deploy:
   env: "BletchmameWeb-env"
   on:
     branches:
-      only:
-        - development
+      only: development

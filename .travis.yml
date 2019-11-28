@@ -9,5 +9,5 @@ deploy:
   app: "BletchMAME Web"
   env: "BletchmameWeb-env"
   on:
-    branches:
-      only: development
+    all_branches: true
+    condition: $TRAVIS_BRANCH =~ ^(development)$

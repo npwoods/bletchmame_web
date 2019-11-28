@@ -8,6 +8,7 @@ deploy:
   region: "us-east-1"
   app: "BletchMAME Web"
   env: "BletchmameWeb-env"
+  bucket: elasticbeanstalk-us-east-1-629514250742
   on:
     all_branches: true
     condition: $TRAVIS_BRANCH =~ ^(development)$

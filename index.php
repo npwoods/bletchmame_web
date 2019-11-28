@@ -75,7 +75,7 @@ $all_versions = array(
         particularly suitable to computer emulation.
     </p>
     <p>
-        The current BletchMAME is version 1.6, and requires MAME 0.213 or later.
+        The current BletchMAME is version <?= array_keys($all_versions)[0] ?>, and requires MAME 0.213 or later.
     </p>
 
     <h2>Screenshots</h2>

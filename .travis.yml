@@ -4,6 +4,7 @@ script:
   - echo dummy
 
 deploy:
-  provider: s3
-  bucket: bletchmame
-  skip_cleanup: true
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "BletchMAME Web"
+  env: "BletchmameWeb-env"

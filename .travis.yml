@@ -8,3 +8,7 @@ deploy:
   region: "us-east-1"
   app: "BletchMAME Web"
   env: "BletchmameWeb-env"
+  on:
+    branches:
+	  only:
+	    - development

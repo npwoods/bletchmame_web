@@ -12,4 +12,11 @@ deploy:
     on:
       all_branches: true
       condition: $TRAVIS_BRANCH =~ ^(development)$
-
+  - provider: elasticbeanstalk
+    region: "us-east-1"
+    app: "BletchMAME Web"
+    env: "BletchmameWeb-prod"
+    bucket: elasticbeanstalk-us-east-1-629514250742
+    on:
+      all_branches: true
+      condition: $TRAVIS_BRANCH =~ ^(master)$

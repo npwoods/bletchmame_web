@@ -45,7 +45,7 @@ $all_versions = array(
 
 ?>
 <html>
-	<!-- now at www.bletchmame.org -->
+	<!-- --- -->
     <head>
             <title>BletchMAME</title>
             <link rel="stylesheet" href="bletchmame.css" />

@@ -10,4 +10,6 @@ deploy:
     env: "BletchmameWeb-stage"
     bucket: elasticbeanstalk-us-east-1-629514250742
     on:
-      branch: development
+      all_branches: true
+      condition: $TRAVIS_BRANCH =~ ^(development)$
+

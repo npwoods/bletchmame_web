@@ -54,7 +54,7 @@ $all_versions = array(
             return str.replace(/^\s\n+|\s\n+$/g,'');
         }
 
-        fetch("http://bletchmame.s3-website-us-east-1.amazonaws.com/files/version_latest.txt")
+        fetch("https://bletchmame.s3-website-us-east-1.amazonaws.com/files/version_latest.txt")
         .then(function (response) {
             response.text().then(function (text) {
                 text = trimWhitespace(text);

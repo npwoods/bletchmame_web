@@ -2,6 +2,12 @@
 
 $all_versions = array( 
     "1.6" => array( 
+        "date" => "2019-Dec-28", 
+		"msi" => "BletchMAME_1_7.msi",
+		"zip" => "BletchMAME_1_7.zip",
+		"notes" => "Minor usability improvements"
+    ), 
+    "1.6" => array( 
         "date" => "2019-Nov-24", 
 		"msi" => "BletchMAME_1_6.msi",
 		"zip" => "BletchMAME_1_6.zip",

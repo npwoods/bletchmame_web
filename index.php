@@ -1,6 +1,12 @@
 <?php 
 
 $all_versions = array( 
+    "1.8" => array( 
+        "date" => "2020-Feb-16", 
+		"msi" => "BletchMAME_1_8.msi",
+		"zip" => "BletchMAME_1_8.zip",
+		"notes" => "Debugger support"
+    ), 
     "1.7" => array( 
         "date" => "2019-Dec-28", 
 		"msi" => "BletchMAME_1_7.msi",

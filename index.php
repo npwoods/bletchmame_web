@@ -1,5 +1,7 @@
 <?php 
 
+$latest_version = file_get_contents("http://bletchmame.s3-website-us-east-1.amazonaws.com/files/version_latest.txt");
+
 $all_versions = array( 
     "1.8" => array( 
         "date" => "2020-Feb-16", 
@@ -61,22 +63,6 @@ $all_versions = array(
             <title>BletchMAME</title>
             <link rel="stylesheet" href="bletchmame.css" />
     </head>
-    <script language="javascript">
-        function trimWhitespace(str) {
-            return str.replace(/^\s\n+|\s\n+$/g,'');
-        }
-
-        fetch("http://bletchmame.s3-website-us-east-1.amazonaws.com/files/version_latest.txt")
-        .then(function (response) {
-            response.text().then(function (text) {
-                text = trimWhitespace(text);
-                if (!text.endsWith(".0")) {
-                    document.getElementById("bletchmame_latest_version_row").style.visibility = "visible";
-                    document.getElementById("bletchmame_latest_version").innerText = " [" + trimWhitespace(text) + "]";
-                }        
-            });
-        });
-    </script>
 <body>
 
     <h1>BletchMAME</h1>
@@ -146,14 +132,18 @@ $all_versions = array(
 					echo "<td>" . $all_versions[$version]["notes"] . "</td>";
 					echo "</tr>";
 				}
+
+                if (!preg_match('/\.0$/', $version_latest))
+                {
+					echo "<tr>";
+					echo "<td>Bleeding edge latest $version_latest</td>";
+					echo "<td/>";
+					echo "<td><a href=\"files/BletchMAME_latest.msi\">BletchMAME_latest.msi</a></td>";
+					echo "<td><a href=\"files/BletchMAME_latest.zip\">BletchMAME_latest.zip</a></td>";
+					echo "<td>Might not work!</td>";
+					echo "</tr>";                   
+				}
 			?>
-            <tr style="visibility: hidden" id="bletchmame_latest_version_row">
-                <td>Bleeding edge latest<span id="bletchmame_latest_version"></span></td>
-                <td />
-                <td><a href="files/BletchMAME_latest.msi">BletchMAME_latest.msi</a></td>
-                <td><a href="files/BletchMAME_latest.zip">BletchMAME_latest.zip</a></td>
-                <td>Might not work!</td>
-            </tr>
         </tbody>
     </table>
 

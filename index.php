@@ -141,7 +141,7 @@ $all_versions = array(
 					echo "<td>" . $all_versions[$version]["notes"] . "</td>";
 					echo "</tr>";
 
-                    if ($version_latest == "$version.0.0")
+                    if (strcmp($version_latest, "$version.0.0") == 0)
                     {
                         $has_version_lastest = true;
 					}

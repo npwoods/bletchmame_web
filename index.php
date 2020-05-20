@@ -1,7 +1,7 @@
 <?php 
 
 $aws_bucket = "http://bletchmame.s3-website-us-east-1.amazonaws.com";
-$version_latest = file_get_contents("$aws_bucket/files/version_latest.txt");
+$version_latest = trim(file_get_contents("$aws_bucket/files/version_latest.txt"));
 
 $all_versions = array( 
     "1.9" => array( 

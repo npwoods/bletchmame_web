@@ -1,7 +1,7 @@
 <?php 
 
 $aws_bucket = "http://bletchmame.s3-website-us-east-1.amazonaws.com";
-$latest_version = file_get_contents("$aws_bucket/files/version_latest.txt");
+$version_latest = file_get_contents("$aws_bucket/files/version_latest.txt");
 
 $all_versions = array( 
     "1.8" => array( 
@@ -134,10 +134,10 @@ $all_versions = array(
 					echo "</tr>";
 				}
 
-                if (!preg_match('/\.0$/', $latest_version))
+                if (!preg_match('/\.0$/', $version_latest))
                 {
 					echo "<tr>";
-					echo "<td>Bleeding edge latest $latest_version</td>";
+					echo "<td>Bleeding edge latest [$version_latest]</td>";
 					echo "<td/>";
 					echo "<td><a href=\"$aws_bucket/files/BletchMAME_latest.msi\">BletchMAME_latest.msi</a></td>";
 					echo "<td><a href=\"$aws_bucket/files/BletchMAME_latest.zip\">BletchMAME_latest.zip</a></td>";

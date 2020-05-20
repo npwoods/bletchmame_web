@@ -139,6 +139,7 @@ $all_versions = array(
 					echo "<td><a href=\"files/" . $all_versions[$version]["msi"] . "\">" . $all_versions[$version]["msi"] . "</a></td>";
 					echo "<td><a href=\"files/" . $all_versions[$version]["zip"] . "\">" . $all_versions[$version]["zip"] . "</a></td>";
 					echo "<td>" . $all_versions[$version]["notes"] . "</td>";
+                    echo "<td>" . $version_latest . "|" . "$version.0.0" . "</td>" . "|" . $has_version_lastest;
 					echo "</tr>";
 
                     if (strcmp($version_latest, "$version.0.0") == 0)

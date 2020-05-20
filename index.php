@@ -123,6 +123,8 @@ $all_versions = array(
         </thead>
         <tbody>
 			<?
+                $has_version_lastest = false;
+
 				foreach(array_keys($all_versions) as $version)
 				{
 					echo "<tr>";
@@ -132,9 +134,15 @@ $all_versions = array(
 					echo "<td><a href=\"files/" . $all_versions[$version]["zip"] . "\">" . $all_versions[$version]["zip"] . "</a></td>";
 					echo "<td>" . $all_versions[$version]["notes"] . "</td>";
 					echo "</tr>";
+
+                    if ($version_latest == "$version.0.0")
+                    {
+                        $has_version_lastest = true;
+					}
 				}
 
-                if (!preg_match('/\.0$/', $version_latest))
+                # Show bleeding edge version if its not represented above
+                if (!$has_version_lastest)
                 {
 					echo "<tr>";
 					echo "<td>Bleeding edge latest [$version_latest]</td>";

@@ -4,6 +4,12 @@ $aws_bucket = "http://bletchmame.s3-website-us-east-1.amazonaws.com";
 $version_latest = file_get_contents("$aws_bucket/files/version_latest.txt");
 
 $all_versions = array( 
+    "1.9" => array( 
+        "date" => "2020-May-20", 
+		"msi" => "BletchMAME_1_9.msi",
+		"zip" => "BletchMAME_1_9.zip",
+		"notes" => "Support for movie recordings"
+    ), 
     "1.8" => array( 
         "date" => "2020-Feb-16", 
 		"msi" => "BletchMAME_1_8.msi",

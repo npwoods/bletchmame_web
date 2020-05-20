@@ -134,10 +134,10 @@ $all_versions = array(
 					echo "</tr>";
 				}
 
-                if (!preg_match('/\.0$/', $version_latest))
+                if (!preg_match('/\.0$/', $latest_version))
                 {
 					echo "<tr>";
-					echo "<td>Bleeding edge latest $version_latest</td>";
+					echo "<td>Bleeding edge latest $latest_version</td>";
 					echo "<td/>";
 					echo "<td><a href=\"$aws_bucket/files/BletchMAME_latest.msi\">BletchMAME_latest.msi</a></td>";
 					echo "<td><a href=\"$aws_bucket/files/BletchMAME_latest.zip\">BletchMAME_latest.zip</a></td>";

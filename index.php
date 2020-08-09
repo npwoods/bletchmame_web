@@ -165,7 +165,7 @@ $all_versions = array(
     <h2>Source code</h2>
     <p>
         The BletchMAME sources are hosted on GitHub <a href="https://github.com/npwoods/bletchmame">here</a>.
-        <a href="https://travis-ci.org/npwoods/bletchmame"><img src="https://travis-ci.org/npwoods/bletchmame.svg?branch=master" /></a>
+        <img src="https://github.com/npwoods/bletchmame/workflows/CI/badge.svg" />
     </p>
 </body>
 </html>

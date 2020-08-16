@@ -20,7 +20,7 @@ jobs:
       with:
         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        application_name: "BletchMAME Web"
+        application_name: BletchmameWeb
         environment_name: BletchmameWeb-stage
         version_label: b0a53e3f
         region: us-east-1

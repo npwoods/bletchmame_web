@@ -22,5 +22,6 @@ jobs:
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         application_name: "BletchMAME Web"
         environment_name: BletchmameWeb-stage
+        version_label: b0a53e3f-e058-444a-9e60-4c0b9fc1059d
         region: us-east-1
         deployment_package: deploy.zip

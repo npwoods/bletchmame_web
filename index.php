@@ -4,6 +4,12 @@ $aws_bucket = "http://bletchmame.s3-website-us-east-1.amazonaws.com";
 $version_latest = trim(file_get_contents("$aws_bucket/files/version_latest.txt"));
 
 $all_versions = array( 
+    "2.0" => array( 
+        "date" => "2020-Aug-23", 
+		"msi" => "BletchMAME_2_0.msi",
+		"zip" => "BletchMAME_2_0.zip",
+		"notes" => "Overhaul of BletchMAME application"
+    ), 
     "1.9" => array( 
         "date" => "2020-May-20", 
 		"msi" => "BletchMAME_1_9.msi",

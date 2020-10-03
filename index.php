@@ -108,18 +108,18 @@ $all_versions = array(
             <td><a href="images/screenshot3.png"><img src="images/screenshot3.png" class="mycell" /></a></td>
             <td><a href="images/screenshot4.png"><img src="images/screenshot4.png" class="mycell" /></a></td>
             <td><a href="images/screenshot5.png"><img src="images/screenshot5.png" class="mycell" /></a></td>
+            <td><a href="images/screenshot6.png"><img src="images/screenshot6.png" class="mycell" /></a></td>
         </tr>
     </table>
     <table>
         <tr>
-            <td><a href="images/screenshot6.png"><img src="images/screenshot6.png" class="mycell" /></a></td>
             <td><a href="images/screenshot7.png"><img src="images/screenshot7.png" class="mycell" /></a></td>
             <td><a href="images/screenshot8.png"><img src="images/screenshot8.png" class="mycell" /></a></td>
             <td><a href="images/screenshot9.png"><img src="images/screenshot9.png" class="mycell" /></a></td>
             <td><a href="images/screenshot10.png"><img src="images/screenshot10.png" class="mycell" /></a></td>
+            <td><a href="images/screenshot11.png"><img src="images/screenshot11.png" class="mycell" /></a></td>
         </tr>
         <tr>
-            <td><a href="images/screenshot11.png"><img src="images/screenshot11.png" class="mycell" /></a></td>
             <td><a href="images/screenshot12.png"><img src="images/screenshot12.png" class="mycell" /></a></td>
             <td><a href="images/screenshot13.png"><img src="images/screenshot13.png" class="mycell" /></a></td>
             <td><a href="images/screenshot14.png"><img src="images/screenshot14.png" class="mycell" /></a></td>

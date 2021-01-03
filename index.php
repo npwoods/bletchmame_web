@@ -4,6 +4,12 @@ $aws_bucket = "http://bletchmame.s3-website-us-east-1.amazonaws.com";
 $version_latest = trim(file_get_contents("$aws_bucket/files/version_latest.txt"));
 
 $all_versions = array( 
+    "2.4" => array( 
+        "date" => "2021-Jan-3", 
+		"msi" => "BletchMAME_2_4.msi",
+		"zip" => "BletchMAME_2_4.zip",
+		"notes" => "Slot support"
+    ), 
     "2.3" => array( 
         "date" => "2020-Dec-13", 
 		"msi" => "BletchMAME_2_3.msi",
@@ -124,13 +130,14 @@ $all_versions = array(
             <td><a href="images/screenshot9.png"><img src="images/screenshot9.png" class="mycell" /></a></td>
             <td><a href="images/screenshot10.png"><img src="images/screenshot10.png" class="mycell" /></a></td>
             <td><a href="images/screenshot11.png"><img src="images/screenshot11.png" class="mycell" /></a></td>
+            <td><a href="images/screenshot12.png"><img src="images/screenshot12.png" class="mycell" /></a></td>
         </tr>
         <tr>
-            <td><a href="images/screenshot12.png"><img src="images/screenshot12.png" class="mycell" /></a></td>
             <td><a href="images/screenshot13.png"><img src="images/screenshot13.png" class="mycell" /></a></td>
             <td><a href="images/screenshot14.png"><img src="images/screenshot14.png" class="mycell" /></a></td>
             <td><a href="images/screenshot15.png"><img src="images/screenshot15.png" class="mycell" /></a></td>
             <td><a href="images/screenshot16.png"><img src="images/screenshot16.png" class="mycell" /></a></td>
+            <td><a href="images/screenshot17.png"><img src="images/screenshot17.png" class="mycell" /></a></td>
         </tr>
     </table>
     

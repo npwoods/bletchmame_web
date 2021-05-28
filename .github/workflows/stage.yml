@@ -11,10 +11,23 @@ jobs:
     
     - name: Checkout source code
       uses: actions/checkout@v1
-
+      
+    - name: Get timestamp
+      uses: gerred/actions/current-time@master
+      id: current-time
+      
+    - name: Run string replace
+      uses: frabert/replace-string-action@master
+      id: format-time
+      with:
+        pattern: '[:\.]+'
+        string: "${{ steps.current-time.outputs.time }}"
+        replace-with: '-'
+        flags: 'g'
+  
     - name: Generate deployment package
       run: |
-        echo "<!-- Deployed on $(date) -->" >> index.php
+        echo "<!-- Deployed on ${{ steps.format-time.outputs.replaced }} -->" >> index.php
         zip -r deploy.zip . -x '.git*'
       
     - name: Deploy to EB
@@ -24,6 +37,6 @@ jobs:
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         application_name: BletchMameWeb
         environment_name: BletchMameWeb-stage-php8
-        version_label:
+        version_label: "BletchMameWeb-stage-${{ steps.format-time.outputs.replaced }}" 
         region: us-east-1
         deployment_package: deploy.zip

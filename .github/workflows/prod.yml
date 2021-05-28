@@ -1,8 +1,8 @@
-name: Deploy stage
+name: Deploy prod
 on:
   push:
     branches:
-    - stage
+    - master
     
 jobs:
   build:
@@ -28,7 +28,7 @@ jobs:
     - name: Generate deployment package
       run: |
         echo "" >> index.php
-        echo "<!-- Deployed Stage on ${{ steps.format-time.outputs.replaced }} -->" >> index.php
+        echo "<!-- Deployed Prod on ${{ steps.format-time.outputs.replaced }} -->" >> index.php
         zip -r deploy.zip . -x '.git*'
       
     - name: Deploy to EB
@@ -37,7 +37,7 @@ jobs:
         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         application_name: BletchMameWeb
-        environment_name: BletchMameWeb-stage-php8
-        version_label: "BletchMameWeb-stage-${{ steps.format-time.outputs.replaced }}" 
+        environment_name: BletchMameWeb-prod-php8
+        version_label: "BletchMameWeb-prod-${{ steps.format-time.outputs.replaced }}" 
         region: us-east-1
         deployment_package: deploy.zip

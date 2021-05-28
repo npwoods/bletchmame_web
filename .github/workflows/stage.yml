@@ -27,6 +27,7 @@ jobs:
   
     - name: Generate deployment package
       run: |
+        echo "" >> index.php
         echo "<!-- Deployed on ${{ steps.format-time.outputs.replaced }} -->" >> index.php
         zip -r deploy.zip . -x '.git*'
       

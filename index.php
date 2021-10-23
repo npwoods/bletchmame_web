@@ -168,8 +168,8 @@ $all_versions = array(
             <td><a href="images/screenshot15.png"><img src="images/screenshot15.png" class="mycell" /></a></td>
             <td><a href="images/screenshot16.png"><img src="images/screenshot16.png" class="mycell" /></a></td>
             <td><a href="images/screenshot17.png"><img src="images/screenshot17.png" class="mycell" /></a></td>
-            <td><a href="images/screenshot17.png"><img src="images/screenshot18.png" class="mycell" /></a></td>
-            <td><a href="images/screenshot17.png"><img src="images/screenshot19.png" class="mycell" /></a></td>
+            <td><a href="images/screenshot18.png"><img src="images/screenshot18.png" class="mycell" /></a></td>
+            <td><a href="images/screenshot19.png"><img src="images/screenshot19.png" class="mycell" /></a></td>
         </tr>
     </table>
     

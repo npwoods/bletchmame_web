@@ -4,118 +4,124 @@ $aws_bucket = "http://bletchmame.s3-website-us-east-1.amazonaws.com";
 $version_latest = trim(file_get_contents("$aws_bucket/files/version_latest.txt"));
 
 $all_versions = array( 
-    "2.8" => array( 
-        "date" => "2021-Aug-29", 
+	"2.9" => array( 
+		"date" => "2021-Oct-23", 
+		"msi" => "BletchMAME_2_9.msi",
+		"zip" => "BletchMAME_2_9.zip",
+		"notes" => "Experimental auditing support"
+	), 
+	"2.8" => array( 
+		"date" => "2021-Aug-29", 
 		"msi" => "BletchMAME_2_8.msi",
 		"zip" => "BletchMAME_2_8.zip",
 		"notes" => "Maintenance update"
-    ), 
-    "2.7" => array( 
-        "date" => "2021-Aug-27", 
+	), 
+	"2.7" => array( 
+		"date" => "2021-Aug-27", 
 		"msi" => "BletchMAME_2_7.msi",
 		"zip" => "BletchMAME_2_7.zip",
 		"notes" => "Maintenance update"
-    ), 
-    "2.6" => array( 
-        "date" => "2021-Mar-6", 
+	), 
+	"2.6" => array( 
+		"date" => "2021-Mar-6", 
 		"msi" => "BletchMAME_2_6.msi",
 		"zip" => "BletchMAME_2_6.zip",
 		"notes" => "Many more folders"
-    ), 
-    "2.5" => array( 
-        "date" => "2021-Jan-31", 
+	), 
+	"2.5" => array( 
+		"date" => "2021-Jan-31", 
 		"msi" => "BletchMAME_2_5.msi",
 		"zip" => "BletchMAME_2_5.zip",
 		"notes" => "Initial Folder and Snapshot View"
-    ), 
-    "2.4" => array( 
-        "date" => "2021-Jan-3", 
+	), 
+	"2.4" => array( 
+		"date" => "2021-Jan-3", 
 		"msi" => "BletchMAME_2_4.msi",
 		"zip" => "BletchMAME_2_4.zip",
 		"notes" => "Slot support"
-    ), 
-    "2.3" => array( 
-        "date" => "2020-Dec-13", 
+	), 
+	"2.3" => array( 
+		"date" => "2020-Dec-13", 
 		"msi" => "BletchMAME_2_3.msi",
 		"zip" => "BletchMAME_2_3.zip",
 		"notes" => "Bug fixes"
-    ), 
-    "2.2" => array( 
-        "date" => "2020-Oct-3", 
+	), 
+	"2.2" => array( 
+		"date" => "2020-Oct-3", 
 		"msi" => "BletchMAME_2_2.msi",
 		"zip" => "BletchMAME_2_2.zip",
 		"notes" => "Cheat support"
-    ), 
-    "2.1" => array( 
-        "date" => "2020-Aug-29", 
+	), 
+	"2.1" => array( 
+		"date" => "2020-Aug-29", 
 		"msi" => "BletchMAME_2_1.msi",
 		"zip" => "BletchMAME_2_1.zip",
 		"notes" => "Bug fixes"
-    ), 
-    "2.0" => array( 
-        "date" => "2020-Aug-23", 
+	), 
+	"2.0" => array( 
+		"date" => "2020-Aug-23", 
 		"msi" => "BletchMAME_2_0.msi",
 		"zip" => "BletchMAME_2_0.zip",
 		"notes" => "Overhaul of BletchMAME application"
-    ), 
-    "1.9" => array( 
-        "date" => "2020-May-20", 
+	), 
+	"1.9" => array( 
+		"date" => "2020-May-20", 
 		"msi" => "BletchMAME_1_9.msi",
 		"zip" => "BletchMAME_1_9.zip",
 		"notes" => "Support for movie recordings"
-    ), 
-    "1.8" => array( 
-        "date" => "2020-Feb-16", 
+	), 
+	"1.8" => array( 
+		"date" => "2020-Feb-16", 
 		"msi" => "BletchMAME_1_8.msi",
 		"zip" => "BletchMAME_1_8.zip",
 		"notes" => "Debugger support"
-    ), 
-    "1.7" => array( 
-        "date" => "2019-Dec-28", 
+	), 
+	"1.7" => array( 
+		"date" => "2019-Dec-28", 
 		"msi" => "BletchMAME_1_7.msi",
 		"zip" => "BletchMAME_1_7.zip",
 		"notes" => "Minor usability improvements"
-    ), 
-    "1.6" => array( 
-        "date" => "2019-Nov-24", 
+	), 
+	"1.6" => array( 
+		"date" => "2019-Nov-24", 
 		"msi" => "BletchMAME_1_6.msi",
 		"zip" => "BletchMAME_1_6.zip",
 		"notes" => "Bug fixes"
-    ), 
-    "1.5" => array( 
-        "date" => "2019-Nov-10", 
+	), 
+	"1.5" => array( 
+		"date" => "2019-Nov-10", 
 		"msi" => "BletchMAME_1_5.msi",
 		"zip" => "BletchMAME_1_5.zip",
 		"notes" => "Support for MAMEUI-style icon packs"
-    ), 
-    "1.4" => array( 
-        "date" => "2019-Nov-3", 
+	), 
+	"1.4" => array( 
+		"date" => "2019-Nov-3", 
 		"msi" => "BletchMAME_1_4.msi",
 		"zip" => "BletchMAME_1_4.zip",
 		"notes" => "Full software list support"
-    ), 
-    "1.3" => array( 
-        "date" => "2019-Oct-9", 
+	), 
+	"1.3" => array( 
+		"date" => "2019-Oct-9", 
 		"msi" => "BletchMAME_1_3.msi",
 		"zip" => "BletchMAME_1_3.zip",
 		"notes" => "Basic software list support"
-    ), 
-    "1.2" => array( 
-        "date" => "2019-Sep-18", 
+	), 
+	"1.2" => array( 
+		"date" => "2019-Sep-18", 
 		"msi" => "BletchMAME_1_2.msi",
 		"zip" => "BletchMAME_1_2.zip",
 		"notes" => "Bug fixes"
-    ), 
-    "1.1" => array( 
-        "date" => "2019-Sep-8", 
+	), 
+	"1.1" => array( 
+		"date" => "2019-Sep-8", 
 		"msi" => "BletchMAME_1_1.msi",
 		"notes" => "Bug fixes"
-    ), 
-    "1.0" => array( 
-        "date" => "2019-Sep-7", 
+	), 
+	"1.0" => array( 
+		"date" => "2019-Sep-7", 
 		"msi" => "BletchMAME_1_0.msi",
 		"notes" => "Initial release"
-    )
+	)
 ); 
 
 ?>
@@ -155,13 +161,15 @@ $all_versions = array(
             <td><a href="images/screenshot10.png"><img src="images/screenshot10.png" class="mycell" /></a></td>
             <td><a href="images/screenshot11.png"><img src="images/screenshot11.png" class="mycell" /></a></td>
             <td><a href="images/screenshot12.png"><img src="images/screenshot12.png" class="mycell" /></a></td>
+            <td><a href="images/screenshot13.png"><img src="images/screenshot13.png" class="mycell" /></a></td>
         </tr>
         <tr>
-            <td><a href="images/screenshot13.png"><img src="images/screenshot13.png" class="mycell" /></a></td>
             <td><a href="images/screenshot14.png"><img src="images/screenshot14.png" class="mycell" /></a></td>
             <td><a href="images/screenshot15.png"><img src="images/screenshot15.png" class="mycell" /></a></td>
             <td><a href="images/screenshot16.png"><img src="images/screenshot16.png" class="mycell" /></a></td>
             <td><a href="images/screenshot17.png"><img src="images/screenshot17.png" class="mycell" /></a></td>
+            <td><a href="images/screenshot17.png"><img src="images/screenshot18.png" class="mycell" /></a></td>
+            <td><a href="images/screenshot17.png"><img src="images/screenshot19.png" class="mycell" /></a></td>
         </tr>
     </table>
     

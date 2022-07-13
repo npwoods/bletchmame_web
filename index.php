@@ -162,6 +162,7 @@ $all_versions = array(
 
 ?>
 <html>
+	<!-- BletchMAME -->
     <head>
             <title>BletchMAME</title>
             <link rel="stylesheet" href="bletchmame.css" />

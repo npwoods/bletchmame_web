@@ -238,7 +238,14 @@ $all_versions = array(
 					echo "<td>$version</td>";
 					echo "<td>" . $all_versions[$version]["date"] . "</td>";
 					echo "<td><a href=\"files/" . $all_versions[$version]["msi"] . "\">" . $all_versions[$version]["msi"] . "</a></td>";
-					echo "<td><a href=\"files/" . $all_versions[$version]["zip"] . "\">" . $all_versions[$version]["zip"] . "</a></td>";
+					if (array_key_exists("zip", $all_versions[$version]))
+					{
+						echo "<td><a href=\"files/" . $all_versions[$version]["zip"] . "\">" . $all_versions[$version]["zip"] . "</a></td>";
+					}
+					else
+					{
+						echo "<td/>";
+					}
 					echo "<td>" . $all_versions[$version]["notes"] . "</td>";
 					echo "</tr>";
 

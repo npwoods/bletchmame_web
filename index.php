@@ -172,6 +172,23 @@ $all_versions = array(
     <head>
             <title>BletchMAME</title>
             <link rel="stylesheet" href="bletchmame.css" />
+        	<script language="javascript">
+			<!--
+				window.onload = (event) => {
+                    fetch("http://bletchmame.s3-website-us-east-1.amazonaws.com/files/version_latest.txt", {
+                        method: "GET"
+                    })
+                    .then((response) => response.text())
+                    .then((result) => {
+						result = result.trim();
+						if (!result.endsWith("0.0")) {
+							document.getElementById("latest_text").innerText +=  " [" + result + "]";
+							document.getElementById("latest_tr").style.display = "table-row";
+						}
+                    });
+				};
+			-->
+			</script>
     </head>
 <body>
     <h1>BletchMAME</h1>
@@ -236,8 +253,6 @@ $all_versions = array(
         </thead>
         <tbody>
 			<?
-                $has_version_lastest = false;
-
 				foreach(array_keys($all_versions) as $version)
 				{
 					echo "<tr>";
@@ -253,25 +268,17 @@ $all_versions = array(
 						echo "<td/>";
 					}
 					echo "<td>" . $all_versions[$version]["notes"] . "</td>";
-					echo "</tr>";
-
-                    if (strcmp($version_latest, "$version.0.0") == 0)
-                    {
-                        $has_version_lastest = true;
-					}
+					echo "</tr>\n";
 				}
 
                 # Show bleeding edge version if its not represented above
-                if (!$has_version_lastest)
-                {
-					echo "<tr>";
-					echo "<td>Bleeding edge latest [$version_latest]</td>";
-					echo "<td/>";
-					echo "<td><a href=\"$aws_bucket/files/BletchMAME_latest.msi\">BletchMAME_latest.msi</a></td>";
-					echo "<td><a href=\"$aws_bucket/files/BletchMAME_latest.zip\">BletchMAME_latest.zip</a></td>";
-					echo "<td>Might not work!</td>";
-					echo "</tr>";                   
-				}
+				echo "<tr id=\"latest_tr\" style=\"display: none\">";
+				echo "<td id=\"latest_text\">Bleeding edge latest</td>";
+				echo "<td/>";
+				echo "<td><a href=\"$aws_bucket/files/BletchMAME_latest.msi\">BletchMAME_latest.msi</a></td>";
+				echo "<td><a href=\"$aws_bucket/files/BletchMAME_latest.zip\">BletchMAME_latest.zip</a></td>";
+				echo "<td>Might not work!</td>";
+				echo "</tr>\n";
 			?>
         </tbody>
     </table>

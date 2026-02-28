@@ -10,13 +10,29 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v3
-      - uses: taiki-e/install-action@v2
+      # Check out    
+      - name: Check out
+        uses: actions/checkout@v3
+
+      # Install Zola
+      - name: Install Zola
+        uses: taiki-e/install-action@v2
         with:
           tool: zola@0.17.2
-      - name: Build
+
+      - name: Debug
+        run: |
+          pwd
+          ls -la
+          ls -la website
+    
+      # Build with Zola
+      - name: Build with Zola
         run: zola build
-      - uses: reggionick/s3-deploy@v4
+
+      # Deploy to S3
+      - name: Deploy to S3
+        uses: reggionick/s3-deploy@v4
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -25,4 +41,5 @@ jobs:
           bucket: ${{ github.event_name == 'workflow_dispatch' && secrets.S3_BUCKET_PROD || secrets.S3_BUCKET_STAGE }}
           private: true
           bucket-region: us-east-1
+
 

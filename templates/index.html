@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{ section.title }}</h1>
+
+<p>
+    The current BletchMAME is version {{ section.extra.versions[0].version }}, and requires MAME 0.213 or later.
+</p>
+
+{{ section.content | safe }}
+
+<table border="1">
+    <thead>
+        <tr>
+            <td>Version</td>
+            <td>Date</td>
+            <td>MSI</td>
+            <td>ZIP</td>
+            <td>Summary</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for v in section.extra.versions %}
+        <tr>
+            <td>{{ v.version }}</td>
+            <td>{{ v.date }}</td>
+            <td><a href="files/{{ v.msi }}">{{ v.msi }}</a></td>
+            <td>
+                {% if v.zip %}
+                <a href="files/{{ v.zip }}">{{ v.zip }}</a>
+                {% endif %}
+            </td>
+            <td>{{ v.notes }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h2>Source code</h2>
+<p>
+    The BletchMAME sources are hosted on GitHub <a href="https://github.com/npwoods/bletchmame">here</a>.
+    <img src="https://github.com/npwoods/bletchmame/actions/workflows/windows_msys2.yml/badge.svg" />
+</p>
+{% endblock content %}

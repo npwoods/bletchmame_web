@@ -41,6 +41,8 @@ jobs:
           bucket: ${{ github.event_name == 'workflow_dispatch' && secrets.S3_BUCKET_PROD || secrets.S3_BUCKET_STAGE }}
           private: true
           bucket-region: us-east-1
+          dist-id: ${{ github.event_name == 'workflow_dispatch' && secrets.CLOUDFRONT_DISTRIBUTION_ID_PROD || secrets.CLOUDFRONT_DISTRIBUTION_ID_STAGE }}
+          invalidation: /*
 
 
 

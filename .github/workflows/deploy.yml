@@ -20,14 +20,15 @@ jobs:
         with:
           tool: zola@0.17.2
 
-      - name: Debug
-        run: |
-          pwd
-          ls -la
     
       # Build with Zola
       - name: Build with Zola
-        run: zola build
+        run: |
+          if [ "${GITHUB_EVENT_NAME}" = "workflow_dispatch" ]; then
+            zola build
+          else
+            zola build --base-url "https://stage.bletchmame.org"
+          fi
 
       # Deploy to S3
       - name: Deploy to S3
@@ -40,5 +41,6 @@ jobs:
           bucket: ${{ github.event_name == 'workflow_dispatch' && secrets.S3_BUCKET_PROD || secrets.S3_BUCKET_STAGE }}
           private: true
           bucket-region: us-east-1
+
 
 

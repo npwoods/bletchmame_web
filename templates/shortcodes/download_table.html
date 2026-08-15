@@ -1,0 +1,30 @@
+{# Template: download_table.html
+Parameters: version_prefix
+#}
+<table class="download-table">
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Date</th>
+      <th>Downloads</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% set releases = load_data(path="data/releases.json") %}
+    {% set current_version = releases[0].version %}
+    {% for v in releases %}
+    {% if v.version is starting_with(version_prefix) %}
+    <tr {% if v.version==current_version %}class="current-release" {% endif %}>
+      <td>{{ v.version }}{% if v.version == current_version %}<span class="current-badge">current</span>{% endif %}</td>
+      <td>{{ v.date }}</td>
+      <td>
+        <a href="{{ get_url(path='files/' ~ v.msi) }}">MSI</a>
+        {% if v.zip %}| <a href="{{ get_url(path='files/' ~ v.zip) }}">ZIP</a>{% endif %}
+      </td>
+      <td>{{ v.notes }}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+  </tbody>
+</table>

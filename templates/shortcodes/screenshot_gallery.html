@@ -1,0 +1,10 @@
+<div class="gallery">
+    {% set screenshots = load_data(path="data/screenshots.json", format="json") %}
+    {% for shot in screenshots %}
+    <div class="gallery-item">
+        <a href="{{ get_url(path=shot.image) }}"><img src="{{ get_url(path=shot.image) }}" alt="{{ shot.title }}"
+                class="mycell" /></a>
+        <h3>{{ shot.title }}</h3>
+    </div>
+    {% endfor %}
+</div>

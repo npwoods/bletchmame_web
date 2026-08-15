@@ -1,0 +1,1 @@
+This project is for a static web site intended to be the home of the "BletchMAME" project.  This project uses Zola to build the actual static web site which is hosted in an S3 bucket.  There are three pages - the "Home", "Gallery" and "Downloads"

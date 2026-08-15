@@ -1,0 +1,23 @@
+<div class="rotating-screenshots">
+    {% set screenshots = load_data(path="data/screenshots.json", format="json") %}
+    <div id="screenshot-carousel">
+        {% for shot in screenshots %}
+        <div class="carousel-item {% if loop.first %}active{% endif %}">
+            <img src="{{ get_url(path=shot.image) }}" alt="{{ shot.title }}" class="carousel-img" />
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<script>
+    (function () {
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.carousel-item');
+        if (items.length > 1) {
+            setInterval(() => {
+                items[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % items.length;
+                items[currentIndex].classList.add('active');
+            }, 5000);
+        }
+    })();
+</script>

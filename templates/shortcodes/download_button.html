@@ -1,0 +1,11 @@
+<div class="prominent-download">
+    {% set releases = load_data(path="data/releases.json") %}
+    {% set download_version = releases[0] %}
+    <img src="{{ get_url(path='images/bletchmame.png') }}" alt="BletchMAME Icon" class="download-icon" />
+    <span class="download-label"><strong>Get BletchMAME:</strong></span>
+    <a href="{{ get_url(path='files/' ~ download_version.msi) }}" class="download-button">
+        <img src="{{ get_url(path='images/windows-icon.svg') }}" alt="Windows" class="button-icon" />
+        Latest Windows MSI ({{ download_version.version }})
+    </a>
+    <a href="{{ get_url(path='@/download.md') }}" class="other-downloads">Other Downloads</a>
+</div>

@@ -3,6 +3,7 @@ on:
   push:
     branches:
     - master
+    - stage
   workflow_dispatch:
 
 jobs:
@@ -24,7 +25,7 @@ jobs:
       # Build with Zola
       - name: Build with Zola
         run: |
-          if [ "${GITHUB_EVENT_NAME}" = "workflow_dispatch" ]; then
+          if [ "${GITHUB_REF##*/}" = "master" ]; then
             zola build
           else
             zola build --base-url "https://stage.bletchmame.org"
@@ -38,10 +39,10 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         with:
           folder: public
-          bucket: ${{ github.event_name == 'workflow_dispatch' && secrets.S3_BUCKET_PROD || secrets.S3_BUCKET_STAGE }}
+          bucket: ${{ github.ref == 'refs/heads/master' && secrets.S3_BUCKET_PROD || secrets.S3_BUCKET_STAGE }}
           private: true
           bucket-region: us-east-1
-          dist-id: ${{ github.event_name == 'workflow_dispatch' && secrets.CLOUDFRONT_DISTRIBUTION_ID_PROD || secrets.CLOUDFRONT_DISTRIBUTION_ID_STAGE }}
+          dist-id: ${{ github.ref == 'refs/heads/master' && secrets.CLOUDFRONT_DISTRIBUTION_ID_PROD || secrets.CLOUDFRONT_DISTRIBUTION_ID_STAGE }}
           invalidation: /*
 
 

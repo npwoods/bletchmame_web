@@ -1,22 +1,82 @@
 [
-    { "image": "images/screenshot1.png", "title": "Main Window" },
-    { "image": "images/screenshot2.png", "title": "Game Selection" },
-    { "image": "images/screenshot3.png", "title": "System Information" },
-    { "image": "images/screenshot4.png", "title": "Controller Configuration" },
-    { "image": "images/screenshot5.png", "title": "Profile Editor" },
-    { "image": "images/screenshot6.png", "title": "Software List Explorer" },
-    { "image": "images/screenshot7.png", "title": "Slot Options" },
-    { "image": "images/screenshot8.png", "title": "Cheats Manager" },
-    { "image": "images/screenshot9.png", "title": "Filter Settings" },
-    { "image": "images/screenshot10.png", "title": "Icons View" },
-    { "image": "images/screenshot11.png", "title": "Audit Results" },
-    { "image": "images/screenshot12.png", "title": "Device View" },
-    { "image": "images/screenshot13.png", "title": "Input Mapping" },
-    { "image": "images/screenshot14.png", "title": "Cassette Controls" },
-    { "image": "images/screenshot15.png", "title": "Debugger Interface" },
-    { "image": "images/screenshot16.png", "title": "Movie Recording" },
-    { "image": "images/screenshot17.png", "title": "Folder View" },
-    { "image": "images/screenshot18.png", "title": "Snapshots" },
-    { "image": "images/screenshot19.png", "title": "Search Function" },
-    { "image": "images/screenshot20.png", "title": "Settings" }
+    {
+        "image": "images/screenshot1.png",
+        "title": "Selecting A Game"
+    },
+    {
+        "image": "images/screenshot2.png",
+        "title": "Selecting A System"
+    },
+    {
+        "image": "images/screenshot3.png",
+        "title": "Paths Dialog"
+    },
+    {
+        "image": "images/screenshot4.png",
+        "title": "Pacman In Action"
+    },
+    {
+        "image": "images/screenshot5.png",
+        "title": "Pigskin In Action"
+    },
+    {
+        "image": "images/screenshot6.png",
+        "title": "Configuring A System"
+    },
+    {
+        "image": "images/screenshot7.png",
+        "title": "Loading From Cassette"
+    },
+    {
+        "image": "images/screenshot8.png",
+        "title": "Loading An Image"
+    },
+    {
+        "image": "images/screenshot9.png",
+        "title": "Legend Of Zelda"
+    },
+    {
+        "image": "images/screenshot10.png",
+        "title": "***Super Mario World"
+    },
+    {
+        "image": "images/screenshot11.png",
+        "title": "***Oregon Trail"
+    },
+    {
+        "image": "images/screenshot12.png",
+        "title": "***M.U.L.E."
+    },
+    {
+        "image": "images/screenshot13.png",
+        "title": "Joystick Configuration"
+    },
+    {
+        "image": "images/screenshot14.png",
+        "title": "APB - All Points Bulletin"
+    },
+    {
+        "image": "images/screenshot15.png",
+        "title": "Rampage"
+    },
+    {
+        "image": "images/screenshot16.png",
+        "title": "Configuring Cheats"
+    },
+    {
+        "image": "images/screenshot17.png",
+        "title": "Loading An Image"
+    },
+    {
+        "image": "images/screenshot18.png",
+        "title": "Selecting A Console"
+    },
+    {
+        "image": "images/screenshot19.png",
+        "title": "Selecting A Chess Game"
+    },
+    {
+        "image": "images/screenshot20.png",
+        "title": "Importing A MAME INI"
+    }
 ]

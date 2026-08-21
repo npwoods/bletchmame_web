@@ -25,5 +25,3 @@ Official binaries for BletchMAME are provided for Windows in both Windows Instal
 Source code for BletchMAME is available on GitHub. The main repository is at [github.com/npwoods/bletchmame_rs](https://github.com/npwoods/bletchmame_rs).
 
 Starting with version 3, BletchMAME is written in [Rust](https://rust-lang.org/) and uses the [Slint](https://www.slint.dev) toolkit. Prior to version 3, BletchMAME was written in C++ and the old repository is at [github.com/npwoods/bletchmame](https://github.com/npwoods/bletchmame).
-
-The BletchMAME Rust crate also hosted on [crates.io](https://www.crates.io) [here](https://crates.io/crates/bletchmame)

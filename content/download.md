@@ -4,7 +4,9 @@ template = "page.html"
 weight = 2
 +++
 
-Official binaries for BletchMAME are provided for Windows in both Windows Installer (MSI) and ZIP form.  BletchMAME should work on Linux but not macOS (MAME for macOS currently lacks support for the `-attach_window` parameter)
+Official binaries for BletchMAME are provided for Windows in both Windows Installer (MSI) and ZIP form.  BletchMAME compiles on Linux but not macOS (MAME for macOS currently lacks support for the `-attach_window` parameter)
+
+More details on the differences between different BletchMAME versions can be found in the latest [CHANGELOG](https://github.com/npwoods/bletchmame_rs/blob/master/CHANGELOG.md).
 
 ## Windows Releases
 

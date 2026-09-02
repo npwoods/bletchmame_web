@@ -1,7 +1,7 @@
 [
   {
     "version": "3.0",
-    "date": "2026-Mar-02",
+    "date": "2026-Sep-04",
     "msi": "BletchMAME_3_0.msi",
     "zip": "BletchMAME_3_0.zip",
     "notes": "Initial Rust/Slint release"
@@ -57,7 +57,7 @@
   },
   {
     "version": "2.10",
-    "date": "2021-Dec-5",
+    "date": "2021-Dec-05",
     "msi": "BletchMAME_2_10.msi",
     "zip": "BletchMAME_2_10.zip",
     "notes": "Improved auditing and miscellaneous enhancements"
@@ -85,7 +85,7 @@
   },
   {
     "version": "2.6",
-    "date": "2021-Mar-6",
+    "date": "2021-Mar-06",
     "msi": "BletchMAME_2_6.msi",
     "zip": "BletchMAME_2_6.zip",
     "notes": "Many more folders"
@@ -99,7 +99,7 @@
   },
   {
     "version": "2.4",
-    "date": "2021-Jan-3",
+    "date": "2021-Jan-03",
     "msi": "BletchMAME_2_4.msi",
     "zip": "BletchMAME_2_4.zip",
     "notes": "Slot support"
@@ -113,7 +113,7 @@
   },
   {
     "version": "2.2",
-    "date": "2020-Oct-3",
+    "date": "2020-Oct-03",
     "msi": "BletchMAME_2_2.msi",
     "zip": "BletchMAME_2_2.zip",
     "notes": "Cheat support"
@@ -169,14 +169,14 @@
   },
   {
     "version": "1.4",
-    "date": "2019-Nov-3",
+    "date": "2019-Nov-03",
     "msi": "BletchMAME_1_4.msi",
     "zip": "BletchMAME_1_4.zip",
     "notes": "Full software list support"
   },
   {
     "version": "1.3",
-    "date": "2019-Oct-9",
+    "date": "2019-Oct-09",
     "msi": "BletchMAME_1_3.msi",
     "zip": "BletchMAME_1_3.zip",
     "notes": "Basic software list support"
@@ -190,13 +190,13 @@
   },
   {
     "version": "1.1",
-    "date": "2019-Sep-8",
+    "date": "2019-Sep-08",
     "msi": "BletchMAME_1_1.msi",
     "notes": "Bug fixes"
   },
   {
     "version": "1.0",
-    "date": "2019-Sep-7",
+    "date": "2019-Sep-07",
     "msi": "BletchMAME_1_0.msi",
     "notes": "Initial release"
   }

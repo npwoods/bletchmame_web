@@ -14,6 +14,18 @@ More details on the differences between different BletchMAME versions can be fou
 
 {{ download_table(version_prefix="3.") }}
 
+### Interim Builds ###
+
+Unreleaed interim builds of BletchMAME can be found at the [GitHub CI](https://github.com/npwoods/bletchmame_rs/actions/workflows/windows_release.yml).  Being unreleased, they provide a preview of new functionality but are not guaranteed to be functional.
+
+### Source Code
+
+Source code for BletchMAME is available on GitHub. The main repository is at [github.com/npwoods/bletchmame_rs](https://github.com/npwoods/bletchmame_rs).
+
+## Older Windows Releases
+
+Starting with version 3, BletchMAME is written in [Rust](https://rust-lang.org/) and uses the [Slint](https://www.slint.dev) toolkit. Older versions are written in C++.
+
 ### BletchMAME v2 (C++/[Qt](https://www.qt.io/))
 
 {{ download_table(version_prefix="2.") }}
@@ -22,8 +34,6 @@ More details on the differences between different BletchMAME versions can be fou
 
 {{ download_table(version_prefix="1.") }}
 
-## Source Code
+### Source Code
 
-Source code for BletchMAME is available on GitHub. The main repository is at [github.com/npwoods/bletchmame_rs](https://github.com/npwoods/bletchmame_rs).
-
-Starting with version 3, BletchMAME is written in [Rust](https://rust-lang.org/) and uses the [Slint](https://www.slint.dev) toolkit. Prior to version 3, BletchMAME was written in C++ and the old repository is at [github.com/npwoods/bletchmame](https://github.com/npwoods/bletchmame).
+The old repository is at [github.com/npwoods/bletchmame](https://github.com/npwoods/bletchmame).

@@ -8,6 +8,8 @@ Official binaries for BletchMAME are provided for Windows in both Windows Instal
 
 More details on the differences between different BletchMAME versions can be found in the latest [CHANGELOG](https://github.com/npwoods/bletchmame_rs/blob/master/CHANGELOG.md).
 
+This builds BletchMAME from source, so it requires a Rust toolchain to be installed.
+
 ## Windows Releases
 
 ### BletchMAME v3 ([Rust](https://rust-lang.org/)/[Slint](https://www.slint.dev))
@@ -33,6 +35,13 @@ Starting with version 3, BletchMAME is written in [Rust](https://rust-lang.org/)
 ### BletchMAME v1 (C++/[wxWidgets](https://wxwidgets.org/))
 
 {{ download_table(version_prefix="1.") }}
+
+## Installing with Cargo
+
+BletchMAME is published on [crates.io](https://crates.io/crates/bletchmame), the Rust package repository.  Thus, BletchMAME can be installed with [cargo](https://doc.rust-lang.org/cargo/):
+```sh
+cargo install bletchmame
+```
 
 ### Source Code
 

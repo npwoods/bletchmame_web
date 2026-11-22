@@ -10,4 +10,14 @@ BletchMAME is licensed under the [GNU GPL](https://www.gnu.org/licenses/gpl-3.0.
 
 {{ screenshot_carousel() }}
 
+# News
+
+*2026-Nov-11*: BletchMAME 3.1 has been released! This is largely an incremental release focused on bug fixes and polishing.  Highlights include:
+* Opening images by ZIP and 7z path
+* MAME's Artwork and BGFX paths can now be specified
+* The "Joysticks and Controllers" configuration dialog can now specify device-level input assignment
+* Miscellaneous bug fixes
+
+More information can be found in the [official changelog](https://github.com/npwoods/bletchmame_rs/blob/master/CHANGELOG.md)!
+
 {{ download_button() }}

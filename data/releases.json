@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.1",
+    "date": "2026-Nov-11",
+    "msi": "BletchMAME_3_1.msi",
+    "zip": "BletchMAME_3_1.zip",
+    "notes": "Miscellaneous features and bug fixes"
+  },
+  {
     "version": "3.0",
     "date": "2026-Sep-04",
     "msi": "BletchMAME_3_0.msi",

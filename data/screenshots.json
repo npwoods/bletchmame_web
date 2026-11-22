@@ -78,5 +78,13 @@
     {
         "image": "images/screenshot20.png",
         "title": "Importing A MAME INI"
+    },
+    {
+        "image": "images/screenshot21.png",
+        "title": "Setting Joystick Input by Device"
+    },
+    {
+        "image": "images/screenshot22.png",
+        "title": "Loading A Recent Image"
     }
 ]
